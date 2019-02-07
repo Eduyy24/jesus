@@ -1,0 +1,17 @@
+<div class="justify-content-center btn-group btn-group-justified btn-block btn-lg prue">
+
+  <button type="button" class="btn btn-primary btn-lg" (click)="c_decente()">Laboratorio ER103</button>
+  <button type="button" class="btn btn-primary btn-lg" (click)="lab()">Laboratorio ER104</button>
+
+</div>
+
+<div class="cdoc" *ngIf = "c_d" >
+  <div>
+    <app-card-laboratorio [materia]="Materia103"></app-card-laboratorio>
+  </div>
+</div>
+
+<div *ngIf = "l">
+  <app-card-laboratorio [materia]="Materia104"></app-card-laboratorio>
+
+</div>

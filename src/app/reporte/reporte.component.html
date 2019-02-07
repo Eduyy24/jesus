@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-12 col-md-3" *ngFor="let registroDia of registroProf;index as i">
+        <mat-card class="card">
+            <mat-card-header>
+              Fecha: {{registroDia[0].Fecha}}
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <ul > 
+                  <li *ngFor="let clases of registroProf[i]">
+                    {{clases.Materia}}
+                    <ul>
+                      <li>Inicio: {{clases.Inicio}}</li>
+                      <li>Final:  {{clases.Final}}</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </mat-card-content>
+          </mat-card> 
+    </div>
+</div>
+
+

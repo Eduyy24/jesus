@@ -1,0 +1,22 @@
+.card1{
+    max-width: 700px;
+    background-color: lightsteelblue;
+    
+}
+.ini{
+    text-align: center;
+   
+}
+.buton{
+    text-align: center  
+
+}
+.example-full-width{
+    text-align: center;
+}
+
+.example-header-image {
+    background-image: url('http://www.unipamplona.edu.co/unipamplona/portalIG/home_132/recursos/general/19082015/logo_21.jpg');
+    background-size: cover;
+
+  }

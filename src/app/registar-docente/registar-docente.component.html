@@ -1,0 +1,117 @@
+<div class="container main-container">
+  <h4>Resgistrar <small>Docente</small></h4>
+  <hr>
+  <div>
+
+    <div>
+
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Nombre</label>
+        <div class="col-8">
+
+          <input class="form-control"
+                type="text"
+                placeholder="Nombre"
+                [(ngModel)]="nombre"
+
+                >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido</label>
+        <div class="col-8">
+
+          <input class="form-control"
+                type="text"
+                placeholder="Apellido"
+                [(ngModel)]="apellido"
+                >
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Cédula</label>
+        <div class="col-8">
+
+          <input class="form-control"
+                type="text"
+                placeholder="Cédula"
+                [(ngModel)]="cedula"
+                >
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Ingeniero</label>
+        <div class="col-md-8">
+  
+          <input class="form-control"
+                type="text"
+                placeholder="Ingeniero"
+                [(ngModel)]="ingeniero"
+                >
+        </div>
+      </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Correo</label>
+      <div class="col-md-8">
+
+        <input class="form-control"
+              type="email"
+              placeholder="Correo electrónico"
+              [(ngModel)]="correo"
+              >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Celular</label>
+      <div class="col-md-8">
+
+        <input class="form-control"
+              type="email"
+              placeholder="Celular"
+              [(ngModel)]="celular"
+              >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-12">
+        <label ><strong>Foto de portada</strong></label>
+        <input type="file" class="form-control-file"
+              (change)="detectFiles1($event)" accept="image/*" required
+        >
+        <mat-progress-bar
+          class="example-margin"
+          [color]="color"
+          [mode]="mode1"
+          value="{{ currentUpload1?.progress }}"
+        >
+        </mat-progress-bar>
+        <small id="fileHelp" class="form-text text-muted">
+          Esta es la imagen que se visualizará en la sección de tu comercio.
+        </small>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+        <button type="submit" class="btn btn-outline-primary" (click)="guardar()">
+          Guardar
+        </button>
+        <button type="submit" class="btn btn-outline-primary">
+          Registrar Huella
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

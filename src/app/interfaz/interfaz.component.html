@@ -1,0 +1,72 @@
+<br>
+<br>
+<h1 class="textcenter">CONTROL DE TIEMPOS Y ASISTENCIA AL LABORATORIO </h1>
+<h2 class="textcenter"> ER103 DE INGENIERÍA ELECTRÓNICA </h2>
+<br>
+<div class="hidden-sm-down">
+  <div class="justify-content-center btn-group btn-group-justified btn-block btn-lg prue">
+
+    <button type="button" class="btn btn-primary btn-lg" (click)="c_decente()">Cuerpo Docente</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="lab()">Laboratorios</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="Rdoc()">Registrar Docente</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="Rmate()">Registrar Materia</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="logout()">Cerrar Sesión</button>
+
+  </div>
+</div>
+
+<div class="hidden-md-up">
+    <nav class="nav">
+        <a class="nav-link active" (click)="c_decente()">Docentes</a>
+        <a class="nav-link" (click)="lab()">Laboratorios</a>
+
+      </nav>
+</div>
+
+<br>
+<br>
+<br>
+
+ <!-- <div class="card-deck"> -->
+  <div class="cdoc" [hidden] = "!c_d" >
+    <div class="card-deck">
+      <div *ngFor = "let profes of docentes | async" >
+          
+        <app-card-profesores [profesor]="profes"></app-card-profesores>
+            
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+  
+
+
+<div *ngIf = "l">
+  <app-selec-laboratirio></app-selec-laboratirio>
+</div>
+
+<div *ngIf = "D">
+  <app-registar-docente></app-registar-docente>
+</div>
+
+<div *ngIf = "M">
+  <app-registrar-materias></app-registrar-materias>
+</div>
+
+<div *ngIf = "s">
+    <app-login></app-login>
+  </div>
+
+<br>
+<footer class ="footer bg-inverse text-center ">
+    <div class="container">
+      <p class= "text-white">
+        FACULTAD DE INGENIERIA ELECTRONICA DE LA UNIVERSIDAD DE PAMPLONA
+      </p>
+    </div>
+    <div class="container">
+      <p class= "text-white">
+        &copy; JESÚS ROBLES
+      </p>
+    </div>
+  </footer>

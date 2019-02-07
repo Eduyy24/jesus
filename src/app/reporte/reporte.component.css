@@ -1,0 +1,16 @@
+.card{
+    width: 100%;
+    margin: 10px;
+}
+
+p{
+    font-size: 12px;
+}
+
+.card-2{
+    padding: 5px !important;
+}
+
+ul{
+    padding-left: 25px;
+}

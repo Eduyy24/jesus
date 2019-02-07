@@ -1,0 +1,11 @@
+.example-card {
+    width: 400px;
+  }
+  .example-card-1 {
+    max-width: 540px;
+  }
+  
+img{
+  height: 300px;
+  max-width: 540px;
+}
